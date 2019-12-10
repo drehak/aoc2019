@@ -1,5 +1,5 @@
 main :: IO ()
-main = do putStrLn "Enter/paste lines with masses, then a newline:"
+main = do putStrLn "Enter/paste the orbit map, then a newline:"
           input' <- lines <$> getContents
           let input = takeWhile (not . null) input'
           let orbitMap = map listToPair . map (split ')') $ input
